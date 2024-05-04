@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoracion</title>
+    <link rel="stylesheet" href="boton.css">
+</head>
+<body>
+    <button id="myButton" onclick="mostrarContenido()">COMENZAR UNA HISTORIA MUY TRISTE</button>
+    <div id="contenidoAnterior" style="display: none;">
+        <p style="font-size: 30px; color: #fffb00; filter: drop-shadow(0 0 10px rgb(217, 255, 0));">ANTERIORMENTE BRANDO ESTABA DISCUTIENDO CON NAYE POR QUE NAYE NO LE QUERIA DEJAR MONTAR A CABALLO A BRANDO.. POR SIERTO, EL CABALLO ERA MUY GRANDE</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">🤔</p>
+        <button class="boton2" onclick="ocultarContenidoAnterior()">SIGUIENTE CAPITULO</button>
+    </div>
+    
+    <div id="nuevoContenido" style="display: none;">
+        <p style="font-size: 30px; color: aliceblue; filter: drop-shadow(0 0 10px rgb(0, 0, 0));">EN MEDIO DE LA DISCUCION BRANDO DIJO.. EN VEZ DE QUE YO NO ME SUBA A ESE CABALLO TU NO DEBERIAS HACERLO YA QUE ERES MAS ENANA QUE YO, Y TERMINO CON LA FRASE DE.. (ERES UNA DUENDE), Y DE LA NADA APARECIO LA VOZ DEL COMENTARISTA DE DRAGON BALL DICIENDO.. EN ESE MOMENTO CELL SINTIO EL VERDADERO TERROR</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">☠️ </p>
+        <audio id="miAudio" class="audio1" controls src="MUSICA PARA SUSPENSO-ACCION - MUSIC FOR SUSPENSE-ACTION.mp3"></audio>
+        <button class="boton3" onclick="reproducirAudio2(); detenerAudio(); verContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+    
+    <div id="nuevoContenido2" style="display: none;">
+        <p style="font-size: 30px; color: #fffb00; filter: drop-shadow(0 0 10px rgb(217, 255, 0));">Y EN ESE MISMO INSTANTE BRANDO SE DIO LA VUELTA Y SEÑORAS Y SEÑORES SALIO CORRIENDO ESE HOMBRE COMO UNA BALA Y NAYE QUE NO SE QUEDA ATRAS Y LO PERSIGUE A TODO MOTOR CON UNA ESCOBA EN LA MANO Y EN LA OTRA UNA ZAPATILLA.. HAY MI MADRE, QUE DIOS LO AMPARE A ESE MUCHACHO</p>
+        <P style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">😨</P>
+        <audio id="miAudio2" class="audio2" controls src="y2meta.com - Musica - Benny Hill Show (128 kbps) (1).mp3"></audio>
+        <button class="boton4" onclick="detenerAudio2(); reproducirAudio3(); ojearContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido3" style="display: none;">
+        <p style="font-size: 30px; color: #ffffff; filter: drop-shadow(0 0 10px rgb(0, 0, 0));">Y BRANDO YA VA CORRIENDO UNA CUADRA JUTO A NAYE Y LLEGANDO A LA SEGUNDA CUADRA BRANDO RECUERDA QUE LLEVA LAS PODEROSAS ZAPATILLAS DEL RAYO MCQUEEN Y ENTONCES BRANDO SE TOMA 2 SEGUNDOS PARA ACTIVAR LOS PODERES DE LAS ZAPATILLAS, LAS ACTIVO Y MADRE DE DIOS ESE HOMBRE CORRIO MAS DURO QUE FORES CAM Y ADELANTO A NAYE UNAS 3 CUADRAS MAS... O POR DIOS</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">😈</p>
+        <audio id="miAudio3" class="audio3" controls src="y2meta.com - Bugs Bunny - Bugs Bunny Rides Again - The Chase (320 kbps) (1).mp3"></audio>
+        <button class="boton5" onclick="reproducirAudio4(); detenerAudio3(); mostrarNuevoContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido4" style="display: none;">
+        <p style="font-size: 30px; color: #fffb00; filter: drop-shadow(0 0 10px rgb(217, 255, 0));">Y SEGUIMOS CON ESTA MAGNIFICA HISTORIA.. BRANDO LLEVA ADELANTANDO A NAYE 3 CUADRAS ENTONCES NAYE COMO NO QUIERE UNA HUMILLACION RECUERDA QUE ELLA TAMBIEN LLEVA LA PUNTERIA DE SU ABUELA EN LA SANGRE ENTONCES NAYE TIRA SU ESCOBA EN UN TIRO DIRECTO HACIA BRANDO Y EL LOGRA ESQUIVARLO Y NAYE QUE TIRA SU ZAPATILLA CON LA FUERZA DE THOR Y LOGRA TUMBAR A BRANDO, UFF ESA SI QUE NO PUDO ESQUIVARLA, O POR DIOS ALGUIEN QUE TRAIGA UNA CAMARA PARA ESTA SUCULENTA PELICULA</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">🤡</p>
+        <audio id="miAudio4" class="audio4" controls src="y2meta.com - cancion triste de dragon ball z (128 kbps) (1).mp3"></audio>
+        <button class="boton6" onclick="detenerAudio4(); reproducirAudio5(); ojearNuevoContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido5" style="display: none;">
+        <p style="font-size: 30px; color: #ffffff; filter: drop-shadow(0 0 10px rgb(0, 0, 0));">Y CON ESE TREMENDO GOLPE QUE RECIBIO BRANDO, NAYE APROBECHA PARA ALCANZARLO MIENTRAS EL ESTA TIRADO TRATANDO DE COBRAR CONSIENCIA, A LO QUE NAYE VA A COGERLO DE LA CAMISA PARA RECLAMARLE, BRANDO ACTIVA EL ULTRAINSTINTO Y LA COJE DE LA MANO EL ANTES QUE ELLA LO COJA Y EN ESE MISMO INSTANTE COMIENZA UNA TREMENDA PELEA DE PALABRAS... NAYE: POR QUE ME DIJISTE ENANA. BRANDO: POR QUE LO ERES (LE ACARICIA EL CABELLO) Y LE DICE MI ENANITA Y TE LO PUEDO PROBAR. Y EN ESE MISMO INSTANTE PASA UN SEÑOR MONTADO EN UN CABALLO, QUIEN SABE COMO ES ESO POSIBLE</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">😐</p>
+        <audio id="miAudio5" class="audio5" controls src="y2meta.com - Soundtrack Spiderman Traje Negro (Parte de suspenso) (320 kbps).mp3"></audio>
+        <button class="boton7" onclick="detenerAudio5(); reproducirAudio6(); checarNuevoContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido6" style="display: none;">
+        <p style="font-size: 30px; color: #fffb00; filter: drop-shadow(0 0 10px rgb(187, 255, 0));">ENYONCES BRANDO LA COJE A NAYE Y LA MARCA EN SU ESPALDA Y SE VAN CORRIENDO HACIA EL SEÑOR CON EL CABALLO, LLEGANDO A AQUEL LUGAR BRANDO LE DICE AL SEÑOR QUE LE PRESTE AL CABALLO PARA HACER UNA PRUEBA Y DE SORPRESA EL SEÑOR SALE HABLANDO EN IGLES Y NAYE Y BRANDO SE TERMINAN RIENDO HASTA YO SU COMENTARISTA JAJAJAJA Y ENTONCES DE SOPRESA NAYE TAMBIEN SALE HABLANDO EN IGLES Y BRANDO QUEDO CON EL OJO MAS HABIERTO QUE EL QUE YA SABEN... Y ENTONCES BRANDO LE DIJO A NAYE QUE HABLE CON EL SEÑOR Y LE DIGA QUE LE PRESTE EL CABALLO UN RATO PARA HACER UNA PRUEBA</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">🤣</p>
+        <audio id="miAudio6" class="audio6" controls src="y2meta.com - EFECTO AUDIO SONIDO   RISA CHUCKY (320 kbps) (1).mp3"></audio>
+        <button id="boton8" class="boton8" onclick="reproducirAudio7(); detenerAudio6(); observarNuevoContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido7" style="display: none;">
+        <p style="font-size: 30px; color: #ffffff; filter: drop-shadow(0 0 10px rgb(0, 0, 0));">ENTONCES NAYE EMPEZO HABLAR CON EL SEÑOR Y A MEDIDA DE QUE HABLABAN SE VIO UNA EXPRESION DE SUSTO PERO AL FINAL SE NOTO UNA RISA  SOSPECHOZA, EN FIN.. QUEDARON EN QUE SI LE PRESTARIA EL CABALLO A BRANDO, Y EN ESO SE COMENZO A SUBIR Y YA ESTABA LISTO PA CORRER, YA ESTANDO TODO LISTO BRANDO LE DICE A NAYE QUE YA VUELVO Y AL VOLVER ESPERO TU PERDON, NAYE LE DIJO.. ESTA BIEN AMOR, ENTONCES EL SEÑOR LE DICE A BRANDO EN INGLES ERES MUY VALIENTE Y BRANDO COMENZO A CABALGAR Y EN PLENA UIDA LE PREGUNTA A NAYE QUE QUE DIJO EL SEÑOR, Y NAYE LE RESPONDE CON TONO DE SARCASMO Y GRITANDOLE.. ¡¡QUE LO ARAS BIEN!! Y BRANDO CON DUDAS SIGUE CON SU DEMOSTRACION DE CABALGAR AL CABALLO, (QUE TRAMARA NAYE?.. AVERIGUALO EN EL SIGUIENTE CAPITULO)</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">😗</p>
+        <audio id="miAudio7" class="audio7" controls src="y2meta.com - Sonido Suspense _ Intriga (320 kbps).mp3"></audio>
+        <button id="boton9" class="boton9" onclick="reproducirAudio7(); reproducirAudio8(); detenerAudio7(); pasarNuevoContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido8" style="display: none;">
+        <p style="font-size: 30px; color: #fffb00; filter: drop-shadow(0 0 10px rgb(187, 255, 0));">AQUI ESTAMOS DE BUELTA, BUENO SIGUIENDO CON ESTA HISTORIA.. BRANDO ESTA CABALGANDO AL CABALLO Y DIO UNA VUELTA A LA CALLE Y VIENE DE REGRESE Y AL MIRAR AL FRENTE BRANDO NOTA QUE EL SEÑOR Y NAYE SE HACEN A UN LADO Y EL CONFUNDIDO SE PREGUNTA EL POR QUE HACEN ESO, ENTONCES BRANDO YA VA LLEGANDO DONDE ELLOS Y TRATA DE FRENAR AL CABALLO Y EL CABALLO NO HACE CASO, TRATA Y TRATA Y EL CABALLO NADA QUE FRENA, ENTONCES BRANDO VA PASANDO CON EL CABALLO AL LADO DE ELLOS Y LE PASA GRITANDO A NAYE.. (¡¡PENDEJA DILE AL SEÑOR QUE COMO FRENO A ESTA WUEBADA!!?) Y NAYE CON EL SEÑOR NO DICEN NADA Y SOLO SE RIEN.. Y CARAJO JAJAJA ESE CABALLO CON BRANDO SALE DE NUEVO SIN FRENO A DAR OTRA BUELTA Y ASI ESTUBIERON UNAS 3 BUELTAS MAS Y EL YA NO SOPORTO Y SE TIRA DEL CABALLO</p>
+        <P style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">🤬</P>
+        <audio id="miAudio8" class="audio8" controls src="y2meta.com - 32 Sonidos de Caricaturas _ Cartoon ��- Efecto de Sonido (320 kbps).mp3"></audio>
+        <button id="boton10" class="boton10" onclick="reproducirAudio9(); detenerAudio8(); noNuevoContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido9" style="display: none;">
+        <p style="font-size: 30px; color: #ffffff; filter: drop-shadow(0 0 10px rgb(0, 0, 0));">BRANDO SE TIRA DEL CABALLO Y SE REBUELCA COMO PUERCO POR QUE JUSTAMENTE SE TIRA EN UN ESCIO DE LODO Y NAYE CON EL SEÑOR SE PEGAN LA RISA JAJAJA AHORA BRANDO SE LEVANTA Y VA DIRECTO A RECLAMARLES Y NAYE SE ESCONDE DETRAS DEL SEÑOR Y LLEGA BRANDO Y LES RECLAMA, Y NAYE LE RESPONDE QUE EL SEÑOR DIJO QUE NO ES BUENA IDEA HACERLO CORRER AL CABALLOPOR QUE SE EMOCIONA MUCHO Y EMPIEZA A CORRER DURANTE MUCHO TIEMPO, ENTONCES BRANDO DIJO.. AHORA ENTIENDO EL POR QUE CUANDO ESTABAS HABLANDO CON EL SEÑOR TE ASUSTASTE Y DESPUES TE REISTE, Y NAYE DICE.. BUENO PERO LO PROBASTE, NO? JAJAJA Y BRANDO LE DICE.. SI PERO ESE CABALLO PARECIA EL DIABLO Y YO PENSANDO QUE ERA NORMAL</p>
+        <p style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">😩</P>
+        <audio id="miAudio9" class="audio9" controls src="y2meta.com - TOQUE DE SILENCIO (192 kbps) (1).mp3"></audio>
+        <button id="boton11" class="boton11" onclick="detenerAudio9(); reproducirAudio10(); suNuevoContenido()">SIGUIENTE CAPITULO</button>
+    </div>
+
+    <div id="nuevoContenido10" style="display: none;">
+        <p style="font-size: 30px; color: #fffb00; filter: drop-shadow(0 0 10px rgb(187, 255, 0));">ENTONCES BRANDO SE LE AGARRA A NAYE DE LA MANO Y LE DA UNA BUELTA Y TERMINA SOSTENIENDOLA DE LA SINTURA Y LA BESA SUSURRANDOLE.. TODO ESTE TEMA DEL CABALLO YA ME TIENE ARTO, AMANECIMOS PELIANDO, QUE TAL SI LO TERMINAMOS CON UN MAÑANERO ATRASADO? Y NAYE LE RESPONDE.. SI ASI ME VAS A CONSENTIR POR DECIRME ENANA LO HACEPTO PAPI. Y ENTONCES BRANDO LE MUERDE LA OREJA Y LA MARCA EN SUS BRAZOS Y SE VAN, ANTES DE IRSE BRANDO LE DICE AL SEÑOR.. GRACIAS SEÑOR POR EL CABALLO LOCO Y GRACIAS POR LOS MADRAZOS QUE ME ISO DAR, Y NAYE LE RECUERDA QUE EL NO ENTIENDE ESPAÑOL Y SE RIE, Y BRANDO LE DICE.. DEJA DE REIRTE PENDEJA, QUE SI ME DOLIO Y AHORA LLEGANDO A LA CASA A LA QUE LE VA A DOLER ES A TI, Y NAYE SOLO SE RIE Y LO SIGUE ABRAZANDO FUERTE Y SE VAN JAJAJAJA</p>
+        <P style="font-size: 40px; height: 100%; margin: 0; display: flex; justify-content: center; align-items: center;">😏</P>
+        <audio id="miAudio10" class="audio10" controls src="y2meta.com - sonido Sexy - sexy sound - Efecto de sonido (320 kbps).mp3"></audio>
+        <button id="boton12" class="boton12" onclick=" detenerAudio10(); soyNuevoContenido()">PALABRAS DEL CREADOR DE LA HISTORIA, LEEAS😑😑</button>
+    </div>
+
+    <div id="nuevoContenido11" style="display: none;">
+        BVB
+    </div>
+
+
+    
+
+    
+    <script src="desaparecer.js"></script>
+</body>
+</html>
+
+
+
+
+

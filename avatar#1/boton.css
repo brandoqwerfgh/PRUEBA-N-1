@@ -1,0 +1,81 @@
+body {
+    background: linear-gradient(to right, #be35fd, #fd6b6b);
+    background-size: 200% 100%;
+    animation: gradientAnimation 2s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 10px; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-left: 10px solid #fa3200; 
+    border-right: 10px solid #d9ff00; 
+    border-width: 10px;
+    animation: borderAnimation 2s linear infinite alternate;
+    border: 4px solid transparent;
+    background-color: rgb(52, 255, 170);
+    color: black; 
+    transition: all 0.3s ease; 
+    filter: drop-shadow(0 0 10px rgba(58, 5, 253, 0.8));
+}
+
+button:hover {
+    background-color: #b3ff00;
+    color: white;
+    border-color: #4c00ff;
+}
+
+@keyframes borderAnimation {
+    0% {
+        border-left-color: #1eff00;
+        border-right-color: #00ff95;
+    }
+    50% {
+        border-left-color: #001aff; 
+        border-right-color: #ae00ff;
+    }
+    100% {
+        border-left-color: #ff0095; 
+        border-right-color: #000000; 
+    }
+}
+
+.boton2, .boton3, .boton4, .boton5, .boton6, .boton7, .boton8, .boton9, .boton10, .boton11, .boton12 {
+    display: block;
+    margin: 0 auto;
+    text-align: center; 
+    filter: drop-shadow(0 0 10px rgba(0, 255, 213, 0.8));
+}
+
+.audio1, .audio2, .audio3, .audio4, .audio5, .audio6, .audio7, .audio8, .audio9, .audio10 {
+    display: block;
+    margin: 0 auto;
+    text-align: center; 
+    background: linear-gradient(to right, #ff0000, #2bff00);
+    background-size: 300% 200%;
+    animation: gradientAnimation 1s ease infinite;
+    filter: drop-shadow(0 0 10px rgb(0, 255, 21));
+}
+
